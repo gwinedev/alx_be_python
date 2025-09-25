@@ -1,0 +1,1 @@
+This project delves into the fundamentals of functions, data structures, and modules in Python. You’ll explore how to define and utilize functions, effectively manage data using various built-in structures, and leverage modules and libraries to extend Python’s capabilities.
