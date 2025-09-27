@@ -11,15 +11,15 @@ user_input = input("Enter the temperature to convert: ")
 
 if user_input.isdigit():
     temp = float(user_input)
+
+    scale = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper()
+    if scale == "F":
+        converted_temp = convert_to_celsius(temp)
+        print(f"{temp}°C is {converted_temp}°{scale}")
+    elif scale == "C":
+        converted_temp = convert_to_fahrenheit(temp)
+        print(f"{temp}°F is {converted_temp}°{scale}")
+    else:
+        print("Enter a valid scale")
 else:
     print("Invalid temperature. Please enter a numeric value.")
-
-scale = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper()
-if scale == "F":
-    convert = convert_to_celsius(temp)
-    print(f"{temp}°C is {convert}°{scale}")
-elif scale == "C":
-    convert = convert_to_fahrenheit(temp)
-    print(f"{temp}°F is {convert}°{scale}")
-else:
-    print("Enter a valid scale")
