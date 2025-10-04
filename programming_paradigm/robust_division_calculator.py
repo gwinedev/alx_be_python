@@ -10,7 +10,3 @@ def safe_divide(numerator, denominator):
         return f'The result of the division is {num / den}'
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
-    
-print(safe_divide(10, 5))
-print(safe_divide(10, 0))
-print(safe_divide("ten", 5))
