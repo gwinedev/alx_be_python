@@ -7,7 +7,7 @@ def safe_divide(numerator, denominator):
         return "Error: Please enter numeric values only."
     
     try:
-        return num / den
+        return f'The result of the division is {num / den}'
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
     
