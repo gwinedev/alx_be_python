@@ -1,22 +1,24 @@
-# simple_calculator.py
+from library_management import Book, Library
 
-class SimpleCalculator:
-    """A simple calculator class that supports basic arithmetic operations."""
+def main():
+    # Setup a small library
+    library = Library()
+    library.add_book(Book("Brave New World", "Aldous Huxley"))
+    library.add_book(Book("1984", "George Orwell"))
 
-    def add(self, a, b):
-        """Return the addition of a and b."""
-        return a + b
+    # Initial list of available books
+    print("Available books after setup:")
+    library.list_available_books()
 
-    def subtract(self, a, b):
-        """Return the subtraction of b from a."""
-        return a - b
+    # Simulate checking out a book
+    library.check_out_book("1984")
+    print("\nAvailable books after checking out '1984':")
+    library.list_available_books()
 
-    def multiply(self, a, b):
-        """Return the multiplication of a and b."""
-        return a * b
+    # Simulate returning a book
+    library.return_book("1984")
+    print("\nAvailable books after returning '1984':")
+    library.list_available_books()
 
-    def divide(self, a, b):
-        """Return the division of a by b. Returns None if b is zero."""
-        if b == 0:
-            return None
-        return a / b
+if __name__ == "__main__":
+    main()
