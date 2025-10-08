@@ -21,4 +21,4 @@ class Circle(Shape):
     
     def area(self):
         """Overrides Shape.area()"""
-        return self.radius **2 * math.pi
+        return self.radius ** 2 * math.pi
