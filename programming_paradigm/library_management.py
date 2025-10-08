@@ -26,7 +26,7 @@ class Book:
 class Library:
     """Manages a collection of Book instances"""
     def __init__(self):
-        self.__books = []
+        self._books = []
 
     def add_book(self, book):
         """Adds a Book instance to the library"""
